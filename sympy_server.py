@@ -41,7 +41,7 @@ sys.exit(1)
 class SymPyResource:
 	def on_get(self, req, resp):
 		q = req.params["q"]
-		result = {"result": "%s" % eval(q)}
+		result = {"result": "%s" % eval_sympy(q)}
 		resp.media = result
 
 api = falcon.API()
