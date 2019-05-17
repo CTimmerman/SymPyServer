@@ -52,8 +52,9 @@ if __name__ == '__main__':
 	import sys
 	if "test" in sys.argv:
 		import doctest
-		print(doctest.testmod())
-		sys.exit(2)
+		result = doctest.testmod()
+		print(result)
+		sys.exit(1 if result.failed else 0)
 
 	from wsgiref import simple_server
 	httpd = simple_server.make_server('127.0.0.1', 8000, api)
