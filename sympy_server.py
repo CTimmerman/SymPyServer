@@ -71,7 +71,7 @@ if __name__ == '__main__':
 	import sys
 	if "test" in sys.argv:
 		import doctest
-		result = doctest.testmod()
+		result = doctest.testmod(optionflags=doctest.FAIL_FAST if "fast" in sys.argv else 0)  # Optionally stop testing after a single failure.
 		print(result)
 		sys.exit(1 if result.failed else 0)
 
