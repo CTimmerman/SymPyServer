@@ -6,7 +6,7 @@ import re
 import falcon
 
 
-whitelist = re.compile("([ \d.,<>\[\]()*\/+-]|for|in|Intersection|solveset|S|x|Min|Max|p|Reals)+")
+whitelist = re.compile("(?:[ \d.,<>\[\]()*\/+-]|for|in|Intersection|solveset|S|x|Min|Max|p|Reals)+")
 
 def eval_sympy(q):
 	"""
