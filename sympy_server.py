@@ -47,9 +47,12 @@ def test_performance():
 	Python 3.7:
 	local sympy imports: 9.7 s
 	global sympy imports: 0.0006 s
+	PyPy 3.6-7.1.1-beta0:
+	local sympy imports: 27.3 s
+	global sympy imports: 0.002 s
 	"""
 	import timeit
-	print(timeit.timeit("""eval_sympy("Intersection(*[solveset(p, x, S.Reals) for p in [(x > 4.0000), (x < 6.0000), ((x * (Min(Max(x, 4.0000), 5.0000))) > 7.0000), ((Min(Max(x, 4.0000), 5.0000)) > 5.0000)]])")""", number=10, globals=globals()))
+	return timeit.timeit("""eval_sympy("Intersection(*[solveset(p, x, S.Reals) for p in [(x > 4.0000), (x < 6.0000), ((x * (Min(Max(x, 4.0000), 5.0000))) > 7.0000), ((Min(Max(x, 4.0000), 5.0000)) > 5.0000)]])")""", number=10, globals=globals())
 
 class SymPyResource:
 	def on_get(self, req, resp):
@@ -82,7 +85,7 @@ if __name__ == '__main__':
 		print(result)
 		sys.exit(1 if result.failed else 0)
 	if "perftest" in sys.argv:
-		sys.exit(test_performance())
+		sys.exit(test_performance() > 1)
 
 	from wsgiref import simple_server
 	httpd = simple_server.make_server('127.0.0.1', 8000, api)
