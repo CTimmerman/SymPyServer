@@ -45,7 +45,7 @@ def eval_sympy(q):
 
 def test_performance():
 	"""Best of 5:
-	Python 3.7, best of 5:
+	Python 3.7:
 	local sympy imports: 9.31 s
 	global sympy imports: 9.24 s
 	PyPy 3.6-7.1.1-beta0:
