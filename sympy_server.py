@@ -45,10 +45,10 @@ def eval_sympy(q):
 
 def test_performance():
 	"""Best of 5:
-	Python 3.7:
+	Python 3.6.8:
 	local sympy imports: 9.31 s
 	global sympy imports: 9.24 s
-	PyPy 3.6-7.1.1-beta0:
+	PyPy 3.6.1-7.1.1-beta0:
 	local sympy imports: 22.93 s
 	global sympy imports: 23.55 s
 	"""
@@ -81,6 +81,7 @@ api.add_route('/sympy', SymPyResource())
 if __name__ == '__main__':
 	import sys
 	if "test" in sys.argv:
+		print("Testing Python", sys.version)
 		import doctest
 		result = doctest.testmod(optionflags=doctest.FAIL_FAST if "fast" in sys.argv else 0)  # Optionally stop testing after a single failure.
 		print(result)
