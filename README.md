@@ -2,19 +2,21 @@
 
 SymPy REST API server using Falcon framework.
 
-# Installation
+# Install and run
 
 Run this in cmd.exe:
 
-	mklink /J C:\Python36 C:\Users\name\AppData\Local\Programs\Python\Python36
-	c:\Python36\python.exe -m venv SymPyServer
-	cd SymPyServer
-	Scripts\activate
+	python -m venv venv
+	venv\Scripts\activate
 	pip install -r requirements.txt
 	py sympy_server.py
 
-Venv keeps your project packages with the project.
+Ctrl+C to quit.
 
-# Usage
+The virtual Python environment keeps your project packages with the project. To leave it, use:
 
-http://localhost:8000/sympy?q=Intersection(*[solveset(p,%20x,%20S.Reals)%20for%20p%20in%20[(x%20%3E%204.0000),%20(x%20%3C%2068.0000)]])
+	venv\Scripts\deactivate
+
+# Use
+
+Enter SymPy queries via your browser: http://localhost:8000/sympy?q=Intersection(*[solveset(p,%20x,%20S.Reals)%20for%20p%20in%20[(x%20%3E%204.0000),%20(x%20%3C%2068.0000)]])
