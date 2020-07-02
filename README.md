@@ -4,7 +4,14 @@ SymPy REST API server using Falcon framework.
 
 ## Install and run
 
-In Windows, run this in cmd.exe:
+In Ubuntu Bash:
+
+	python3 -m venv venv
+	source venv/bin/activate
+	python3 -m pip install -r requirements.txt
+	python3 sympy_server.py
+
+In Windows Command Prompt:
 
 	python -m venv venv
 	venv\Scripts\activate
@@ -15,18 +22,8 @@ Ctrl+C to quit.
 
 The virtual Python environment keeps your project packages with the project. To leave it, use:
 
-	venv\Scripts\deactivate
-	
-In Bash on Ubuntu:
-
-	python3 -m venv venv
-	source venv/bin/activate
-	python3 -m pip install -r requirements.txt
-	python3 sympy_server.py
-	
-	Ctrl+C
 	deactivate
-
+	
 ## Use
 
 Enter SymPy queries via your browser, e.g.:
