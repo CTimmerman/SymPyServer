@@ -21,7 +21,7 @@ The virtual Python environment keeps your project packages with the project. To 
 
 Enter SymPy queries via your browser, e.g.:
 
-[http://localhost:8000/sympy?q=Intersection(*[solveset(p, x, S.Reals) for p in [(x %3E 4.0000), (x %3C 68.0000)]])](http://localhost:8000/sympy?q=Intersection(*[solveset(p,%20x,%20S.Reals)%20for%20p%20in%20[(x%20%3E%204.0000),%20(x%20%3C%2068.0000)]]))
+[http://localhost:8000/sympy?q=Intersection(*[solveset(p, x, S.Reals) for p in [(x > 4.0000), (x < 68.0000)]])](http://localhost:8000/sympy?q=Intersection(*[solveset(p,%20x,%20S.Reals)%20for%20p%20in%20[(x%20%3E%204.0000),%20(x%20%3C%2068.0000)]]))
 
 Returns:
 
