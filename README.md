@@ -2,7 +2,7 @@
 
 SymPy REST API server using Falcon framework.
 
-# Install and run
+## Install and run
 
 Run this in cmd.exe:
 
@@ -17,7 +17,7 @@ The virtual Python environment keeps your project packages with the project. To 
 
 	venv\Scripts\deactivate
 
-# Use
+## Use
 
 Enter SymPy queries via your browser, e.g.:
 
